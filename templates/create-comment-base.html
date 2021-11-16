@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Little Nova</title>
+    {% block head %}    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+        {% include "create-comment.js" %}
+      </script>
+    {% endblock %}
+  </head>
+  <body>
+    <!-- Child template -->
+    {% block content %}{% endblock %}
+    <!-- -------------- -->
+      <div>
+        <form id="send-comment" method="post" action="./create" accept-charset="utf-8">
+          <p>name：<input type="text" name="name"></p>
+          <p>text：<input type="text" name="text"></p>
+          <p><input id="submit-comment" type="submit" value="send"></p>
+          <input id="utc" type="hidden" name="utc">
+          <p><input type="reset" value="reset"></p>
+          <p><input type="button" onclick="location.href='/'" value="Return to list of comments"></p>
+        </form>
+      </div>
+  </body>
+</html>

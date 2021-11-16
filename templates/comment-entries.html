@@ -1,0 +1,17 @@
+<!-- Base template -->
+{% extends "create-comment-base.html" %}
+<!-- ------------- -->
+{% block content %}
+    <p>---{{ total }} comment---</p>
+    {% for entry in entries %}
+    <div>
+        <h1>ID {{ entry.id }}</h1>
+        <h3>NAME {{ entry.name }}</h3>
+        <h3>{{ entry.text }}</h3>
+        <h3>{{ entry.utc }}</h3>
+    </div>
+    {% endfor %}
+    <div>
+    <p>---more---<p>
+    </div>
+{% endblock %}

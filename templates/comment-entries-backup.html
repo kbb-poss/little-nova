@@ -1,0 +1,35 @@
+{% extends "create-comment-base.html" %}
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+  <!-- </head> -->
+  <!-- <body> -->
+    {% block content %}
+    <div>
+        <p>---{{ total }} comment---</p>
+        {% for entry in entries %}
+        <div>
+            <h1>ID {{ entry.id }}</h1>
+            <h3>NAME {{ entry.name }}</h3>
+            <h3>{{ entry.text }}</h3>
+            <h3>{{ entry.utc }}</h3>
+        </div>
+        {% endfor %}
+        <div>
+        <p>---more---<p>
+        </div>
+    </div>
+    {% endblock %}
+      <!-- <form id="send-comment" method="post" action="./create" accept-charset="utf-8">
+        <p>name：<input type="text" name="name"></p>
+        <p>text：<input type="text" name="text"></p>
+        <p><input id="submit-comment" type="submit" value="send"></p>
+        <input id="utc" type="hidden" name="utc">
+        <p><input type="reset" value="reset"></p>
+      </form> -->
+    <!-- </div>
+  </body>
+</html> -->

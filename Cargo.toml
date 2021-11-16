@@ -1,0 +1,22 @@
+[package]
+name = "little-nova"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.3.2"
+axum-server = { version = "0.3", features = ["tls-rustls"] }
+
+tokio = { version = "1.13.0", features = ["full"] }
+serde = { version = "1.0.130", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version="0.3", features = ["env-filter"] }
+askama = "0.10"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+
+tower = { version = "0.4", features = ["util", "timeout"] }
+tower-http = { version = "0.1", features = ["add-extension", "trace"] }
+
+chrono = { version = "0.4", features = ["serde"] }
