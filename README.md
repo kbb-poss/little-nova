@@ -1,2 +1,2 @@
 # little-nova
-A simple electronic bulletin board
+A simple electronic bulletin board for Rust
